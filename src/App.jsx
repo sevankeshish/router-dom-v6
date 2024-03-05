@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import AppNav from "./components/AppNav";
 import Layout from "./components/Layout";
+import Payments from "./components/Payments";
+import Profile from "./components/Profile";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Posts from "./pages/Posts";
@@ -13,7 +14,11 @@ function App() {
         <Route path="/app" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="posts" element={<Posts />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="dashboard" element={<Dashboard />}>
+            <Route index element={<Profile />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="payments" element={<Payments />} />
+          </Route>
         </Route>
       </Routes>
     </div>

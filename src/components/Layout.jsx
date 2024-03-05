@@ -6,7 +6,7 @@ const Layout = () => {
     <div>
       <AppNav />
       <Outlet />
-      <footer style={{ marginTop: "5rem" }}>this is a footer</footer>
+      <footer style={{ marginTop: "5rem" }}>this is the footer section</footer>
     </div>
   );
 };
