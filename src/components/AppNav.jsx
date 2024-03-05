@@ -1,19 +1,19 @@
+import { NavLink } from "react-router-dom";
+
 const AppNav = () => {
   return (
     <nav>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <NavLink end to="/app">
+            Home
+          </NavLink>
         </li>
-      </ul>
-      <ul>
         <li>
-          <a href="/Posts">Posts</a>
+          <NavLink to="Posts">Posts</NavLink>
         </li>
-      </ul>
-      <ul>
         <li>
-          <a href="/dashboard">Dashboard</a>
+          <NavLink to="dashboard">Dashboard</NavLink>
         </li>
       </ul>
     </nav>
