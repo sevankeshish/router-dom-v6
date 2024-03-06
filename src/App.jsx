@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/Layout";
 import Payments from "./components/Payments";
+import Post from "./components/Post";
 import Profile from "./components/Profile";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/app" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="posts/:id" element={<Post />} />
           <Route path="posts" element={<Posts />} />
           <Route path="dashboard" element={<Dashboard />}>
             <Route index element={<Profile />} />
