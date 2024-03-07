@@ -6,6 +6,7 @@ import Post from "./components/Post";
 import Profile from "./components/Profile";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 import Posts from "./pages/Posts";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/app" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="posts/:id" element={<Post />} />
+          <Route path="login" element={<Login />} />
           <Route path="posts" element={<Posts />} />
           <Route path="dashboard" element={<Dashboard />}>
             <Route index element={<Profile />} />
