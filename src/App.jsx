@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/Layout";
 import Payments from "./components/Payments";
@@ -18,7 +18,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="posts" element={<Posts />} />
           <Route path="dashboard" element={<Dashboard />}>
-            <Route index element={<Profile />} />
+            <Route index element={<Navigate to="profile" />} />
             <Route path="profile" element={<Profile />} />
             <Route path="payments" element={<Payments />} />
           </Route>
